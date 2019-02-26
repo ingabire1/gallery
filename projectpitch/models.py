@@ -57,36 +57,36 @@ class pitch:
 
        
 
-class vote(db.Model):
-            __tablename__ = 'roles'
-            id = db.Column(db.Integer,primary_key = True)
-            name = db.Column(db.String(255))
-            users = db.relationship('User',backref = 'vote',lazy="dynamic")
+# class vote(db.Model):
+#             __tablename__ = 'roles'
+#             id = db.Column(db.Integer,primary_key = True)
+#             name = db.Column(db.String(255))
+#             users = db.relationship('User',backref = 'vote',lazy="dynamic")
 
 
-def __repr__(self):
-        return f'User {self.name}'
+# def __repr__(self):
+#         return f'User {self.name}'
 
-class User(UserMixin,db.Model):
-    __tablename__ = 'users'
+# class User(UserMixin,db.Model):
+#     __tablename__ = 'users'
 
-    id = db.Column(db.Integer,primary_key = True)
-    username = db.Column(db.String(255),index = True)
-    email = db.Column(db.String(255),unique = True,index = True)
-    role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
-    pass_secure = db.Column(db.String(255))
+#     id = db.Column(db.Integer,primary_key = True)
+#     username = db.Column(db.String(255),index = True)
+#     email = db.Column(db.String(255),unique = True,index = True)
+#     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
+#     pass_secure = db.Column(db.String(255))
    
-    @property
-    def password(self):
-            raise AttributeError('You cannot read the password attribute')
+#     @property
+#     def password(self):
+#             raise AttributeError('You cannot read the password attribute')
 
-    @password.setter
-    def password(self, password):
-            self.pass_secure = generate_password_hash(password)
+#     @password.setter
+#     def password(self, password):
+#             self.pass_secure = generate_password_hash(password)
 
 
-    def verify_password(self,password):
-            return check_password_hash(self.pass_secure,password)
+#     def verify_password(self,password):
+#             return check_password_hash(self.pass_secure,password)
 
-def __repr__(self):
-        return f'User {self.username}'
+# def __repr__(self):
+#         return f'User {self.username}'

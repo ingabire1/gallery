@@ -1,4 +1,4 @@
-NEWS_API_KEY=d51bd896c92448e786bb80dc54e08fca
+NEWS_API_KEY=ce629c831305410ca8237ce243de94a2
 SECRET_KEY=wtfformssecretkey
 
 export MAIL_USERNAME=<Your Email Address>
