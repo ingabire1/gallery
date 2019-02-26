@@ -1,59 +1,59 @@
-from . import db
-from werkzeug.security import generate_password_hash,check_password_hash
-from flask_login import UserMixin
-from . import login_manager
+# from . import db
+# from werkzeug.security import generate_password_hash,check_password_hash
+# from flask_login import UserMixin
+# from . import login_manager
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
+# @login_manager.user_loader
+# def load_user(user_id):
+#     return User.query.get(int(user_id))
 
-def __repr__(self):
-        return f'User {self.username}'
+# def __repr__(self):
+#         return f'User {self.username}'
 
-class comment:
-    '''
-    Comment class to define comment Objects
-    '''
+# class comment:
+#     '''
+#     Comment class to define comment Objects
+#     '''
 
-    def __init__(self,id,title,overview,poster,vote_average,vote_count):
-        self.id =id
-        self.title = title
-        self.overview = overview
-        self.poster = "https://image.tmdb.org/t/p/w500/" + poster
-        self.vote_average = vote_average
-        self.vote_count = vote_count
-
-
-
-class pitch:
-
-    all_reviews = []
-
-    def __init__(self,movie_id,title,imageurl,review):
-        self.movie_id = movie_id
-        self.title = title
-        self.imageurl = imageurl
-        self.review = review
+#     def __init__(self,id,title,overview,poster,vote_average,vote_count):
+#         self.id =id
+#         self.title = title
+#         self.overview = overview
+#         self.poster = "https://image.tmdb.org/t/p/w500/" + poster
+#         self.vote_average = vote_average
+#         self.vote_count = vote_count
 
 
-    def save_review(self):
-        Review.all_reviews.append(self)
+
+# class pitch:
+
+#     all_reviews = []
+
+#     def __init__(self,movie_id,title,imageurl,review):
+#         self.movie_id = movie_id
+#         self.title = title
+#         self.imageurl = imageurl
+#         self.review = review
 
 
-    @classmethod
-    def clear_reviews(cls):
-        Review.all_reviews.clear()
+#     def save_review(self):
+#         Review.all_reviews.append(self)
 
-    @classmethod
-    def get_reviews(cls,id):
 
-        response = []
+#     @classmethod
+#     def clear_reviews(cls):
+#         Review.all_reviews.clear()
 
-        for review in cls.all_reviews:
-            if review.movie_id == id:
-                response.append(review)
+#     @classmethod
+#     def get_reviews(cls,id):
 
-        return response
+#         response = []
+
+#         for review in cls.all_reviews:
+#             if review.movie_id == id:
+#                 response.append(review)
+
+#         return response
 
        
 
