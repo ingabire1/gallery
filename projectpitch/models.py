@@ -10,9 +10,9 @@ def load_user(user_id):
 def __repr__(self):
         return f'User {self.username}'
 
-class Movie:
+class comment:
     '''
-    Movie class to define Movie Objects
+    Comment class to define comment Objects
     '''
 
     def __init__(self,id,title,overview,poster,vote_average,vote_count):
@@ -25,7 +25,7 @@ class Movie:
 
 
 
-class Review:
+class pitch:
 
     all_reviews = []
 
@@ -57,11 +57,11 @@ class Review:
 
        
 
-class Role(db.Model):
+class vote(db.Model):
             __tablename__ = 'roles'
             id = db.Column(db.Integer,primary_key = True)
             name = db.Column(db.String(255))
-            users = db.relationship('User',backref = 'role',lazy="dynamic")
+            users = db.relationship('User',backref = 'vote',lazy="dynamic")
 
 
 def __repr__(self):
