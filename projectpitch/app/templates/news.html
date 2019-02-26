@@ -1,0 +1,4 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block styles%} {{ super() }} {% endblock %}
+{% block content %}
+{{ macro.displayArtiList(technology)}}
+{% endblock %}

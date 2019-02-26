@@ -1,0 +1,4 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %}
+Found {{ news| count }} matches
+{{ macro.displayNewsList(news)}}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block styles%} {{ super() }} {% endblock %}
+{% block content %}
+
+Search for News
+
+Technology News
+{{ macro.displayNewsList(technology)}}
+General News
+{{ macro.displayNewsList(general)}}
+Entertainment
+{{ macro.displayNewsList(entertainment)}}
+{% endblock%}
