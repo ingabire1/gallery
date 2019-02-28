@@ -3,14 +3,17 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config_options
+from flask_mail import Mail
 bootstrap = Bootstrap()
 db = SQLAlchemy()
+mail = Mail()
 
 
 def create_app(config_name):
 
     app = Flask(__name__)
     db.init_app(app)
+    mail.init_app(app)
 
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
@@ -29,5 +32,6 @@ def create_app(config_name):
 
     return app
 
+    
 
     
