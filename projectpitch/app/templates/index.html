@@ -1,4 +1,4 @@
-<!-- {% extends 'base.html'%}
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
 {% block styles%}
@@ -8,35 +8,35 @@
 
 {% block content %}
 <div class="container"
-    style="background-color:red; padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
-    <div class="row" style="text-align:center; font-size:30px;">
-        <span style="font-size:40px; font-family: 'Akronim', cursive;">WELCOME TO PITCHES</span>
+    style="background-color:yellowgreen;padding:40px;font-size: 20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
+    <div class="row" style="text-align:center;  width:40%">
+        <span style="text-align:center; ">WELCOME TO PITCHES</span>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-        <a href="{{url_for('main.interview')}}" style="color:black; font-size:20px;">
+        <a href="{{url_for('main.interview')}}" style="color:black;">
             <br>
-            Inteview Pitches
+            place pitches
         </a>
         <br>
-        <a href="{{url_for('main.pick_up_line')}}" style="color:black; font-size:20px;">
+        <a href="{{url_for('main.pick_up_line')}}" style="color:black;">
             <br>
-            Pick Pitches
+            Price Pitches
         </a>
         <br>
-        <a href="{{url_for('main.promotion')}}" style="color:black; font-size:20px;">
+        <a href="{{url_for('main.promotion')}}" style="color:black;">
             <br>
             Promotion Pitches
         </a>
         <br>
-        <a href="{{url_for('main.product')}}" style="color:black; font-size:20px;">
+        <a href="{{url_for('main.product')}}" style="color:black;">
             <br>
             Product Pitches
         </a>
         <br>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-        <div class="panel style=" style="border: 3px solid #f2f2f2; padding:20px; margin-top:20px;">
-            <p style="font-family: 'Bellefair', serif; font-size:20px;">Write down one Pitch from any categories
+        <div class="panel style=" style="border: 3px solid #f2f2f2; padding:40px; margin-top:40px;">
+            <p>Write down one Pitch from any categories
                 and let other user vote and comment on it. and Please comment on it and vote on
                 pitches posted by other people </p>
 
@@ -53,7 +53,7 @@
     </div>
     </hr>
     <div class="all-pitches">
-        <span style="color:wheat;">All pitches are displayed below</span>
+        <span style="color:wheat;">The pitches are displayed below</span>
         <hr>
         {{macro.displayPitches(pitches)}}
 
@@ -63,4 +63,4 @@
 </div>
 
 
-{% endblock %} -->
+{% endblock %}
