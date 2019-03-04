@@ -5,7 +5,7 @@ class Config:
     
     MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
     SECRET_KEY = '12345'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:12345@localhost/yvett'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:54321@localhost/yvett'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
@@ -24,7 +24,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:12345@localhost/yvett'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:54321@localhost/yvett'
     pass
 
 
