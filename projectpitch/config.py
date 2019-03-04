@@ -24,7 +24,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:54321@localhost/yvett'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     pass
 
 
