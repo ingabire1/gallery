@@ -11,7 +11,7 @@ User Stories
 Prerequisites
 * Python3.6
 Installation steps
-$ git clone https:
+$ git clone https://pitchinga.herokuapp.com/
 $ cd Pitch
 $ source virtual/bin/activate
 Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app('development')
