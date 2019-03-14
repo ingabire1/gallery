@@ -1,4 +1,4 @@
-#!/home/wecode/Documents/djangoproject/gallery/virtual/bin/python
+#!/home/wecode/Documents/djangoproject/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

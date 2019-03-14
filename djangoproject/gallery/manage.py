@@ -20,3 +20,9 @@ if __name__ == "__main__":
             )
         raise
     execute_from_command_line(sys.argv)
+
+    # try:
+    #  editor = Editor.objects.get(email = 'example@gmail.com')
+    #  print('Editor found')
+    # except DoesNotExist:
+    #  print('Editor was not found')
